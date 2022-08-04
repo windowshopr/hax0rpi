@@ -139,9 +139,12 @@ sudo pip3 install -r requirements.txt
 cd && cd $secret
 
 # crackmapexec
+# https://wiki.porchetta.industries/getting-started/installation/installation-on-unix
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+source $HOME/.poetry/env
 git clone --recursive https://github.com/byt3bl33d3r/CrackMapExec
 cd CrackMapExec
-python3 setup.py install
+poetry install
 cd && cd $secret
 
 # photon
